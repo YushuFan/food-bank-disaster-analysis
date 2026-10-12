@@ -1,12 +1,16 @@
-# Food-bank orders during disasters
+# Do disasters bring a surge in food-bank orders?
 
-**Do disaster weeks bring more food-bank orders?** An audit-first Python + SQL case study of a Georgia-related Agency Express extract finds no clear average increase after calendar adjustment. The data support a monitoring baseline, but do not justify a fixed disaster surge multiplier.
+**Georgia food-distribution study · Python + SQL · Applied research**
+
+Disaster planning often assumes orders will rise during an emergency. I rebuilt a collaborative Emory/TechBridge study to test that assumption using more than 600,000 food-order lines.
+
+**Updated analysis:** The estimated difference was **−2.9%** (95% CI: **−13.0% to +8.4%**). The range includes no change, so this dataset does not support a blanket disaster-week surge multiplier.
 
 ![Association estimates and uncertainty across six specifications](reports/figures/sensitivity.png)
 
-**55,201 qualifying recorded orders · 520 observed weeks · 70 acute-disaster overlap weeks**
+**55,201 qualifying orders · 520 observed weeks · 6 model specifications**
 
-The primary estimate is **−2.9%**, with a **95% interval from −13.0% to +8.4%**, on the modeled orders-plus-one scale. This does not prove that disasters have no impact. The study is observational and broad averages can hide local differences.
+The original Emory R analysis reported an association between disaster severity and transaction volume (p = .006). This Python + SQL analysis uses a different disaster definition, so the results are not a like-for-like replication. It describes recorded order activity, not unmet need or completed deliveries.
 
 ## See the finished work
 
