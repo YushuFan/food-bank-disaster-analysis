@@ -1,0 +1,87 @@
+{
+  "headers": 84399,
+  "lines": 606316,
+  "organizations": 1429,
+  "duplicate_header_ids": 0,
+  "duplicate_line_keys": 0,
+  "orphan_lines": 0,
+  "inconsistent_order_dates": 0,
+  "missing_acceptance_lines": 2299,
+  "invalid_acceptance_lines": 0,
+  "receipt_date_present_lines": 0,
+  "positive_quantity_lines": 536754,
+  "zero_quantity_lines_with_date": 67260,
+  "orders_with_lines": 83550,
+  "orders_without_acceptance_date": 255,
+  "orders_with_positive_quantity": 79843,
+  "orders_with_acceptance_before_creation": 31,
+  "primary_orders_all_years": 79814,
+  "acceptance_date_min": "2004-08-30",
+  "acceptance_date_max": "2024-10-08",
+  "missing_organization_matches": 0,
+  "line_status_counts": {
+    "0": 2076,
+    "1": 536757,
+    "6": 67260,
+    "MISSING": 223
+  },
+  "disaster_events": 72,
+  "source_workbook": {
+    "source_filename": "AE Data.xlsx",
+    "size_bytes": 145532675,
+    "sha256": "ffad5b8e2d3475e481a54bac43651d01e588038b0c3490f911432df7c3554ec3",
+    "tables": {
+      "headers": {
+        "sheet": "AE - DocumentHeader",
+        "rows": 84399,
+        "blank_selected_rows": 0,
+        "columns": [
+          "documentid",
+          "sourceorg",
+          "status",
+          "createddate",
+          "expirydate",
+          "modifieddate",
+          "warehouseid",
+          "domainid",
+          "domainname",
+          "archiveddate",
+          "isarchived",
+          "doctype"
+        ]
+      },
+      "lines": {
+        "sheet": "AE - DocumentLine",
+        "rows": 606316,
+        "blank_selected_rows": 0,
+        "columns": [
+          "headerid",
+          "lineitemnumber",
+          "itemcode",
+          "destinationorg",
+          "donatedquantity",
+          "status",
+          "acceptedquantity",
+          "accepteddate",
+          "receiptedquantity",
+          "receipteddate",
+          "rprop1"
+        ]
+      },
+      "organizations": {
+        "sheet": "RW_ORG",
+        "rows": 1429,
+        "blank_selected_rows": 0,
+        "columns": [
+          "org_id",
+          "status_flag",
+          "country",
+          "org_type",
+          "custom_type",
+          "domain"
+        ]
+      }
+    }
+  },
+  "source_events_sha256": "72f87c6d981075a310464aa5498bde7a9b80b6ae7842296dd129e4a9b20f83de"
+}

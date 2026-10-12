@@ -1,0 +1,13 @@
+.venv/
+.local/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.DS_Store
+.env
+data/raw/
+data/interim/
+*.sqlite
+*.sqlite3
+*.xlsx
+reports/analysis_weeks.csv
