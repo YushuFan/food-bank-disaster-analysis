@@ -1,29 +1,22 @@
-# Do disasters bring a surge in food-bank orders?
+# Food Bank Orders During Disasters
 
-**Georgia food-distribution study · Python + SQL · Applied research**
+I used Python and SQL to compare weekly food-bank orders during disaster and non-disaster periods. The source contains **606,316 order lines**; the analysis includes **55,201 qualifying orders across 520 observed weeks** in 2014–2023.
 
-Disaster planning often assumes orders will rise during an emergency. I rebuilt a collaborative Emory/TechBridge study to test that assumption using more than 600,000 food-order lines.
+**Result:** the calendar-adjusted estimate was **−2.9% (95% CI: −13.0% to +8.4%)** on the modeled orders-plus-one scale. This comparison did not provide clear evidence of an increase during disaster periods.
 
-**Updated analysis:** In a calendar-adjusted comparison, the estimated difference was **−2.9%** (95% CI: **−13.0% to +8.4%**). The interval includes no change. This is one reanalysis using a different exposure definition, not a direct replication of the original team result.
+Receipt dates were missing throughout the order-line data, so the outcome measures recorded orders rather than completed deliveries.
 
-**55,201 qualifying orders · 520 observed weeks · 6 model specifications**
+**[View the interactive analysis](https://yushufan.github.io/projects/food-bank/)** · [Findings](reports/FINDINGS.md) · [Methods](docs/ANALYSIS_PLAN.md)
 
-The original Emory R analysis reported an association between disaster severity and transaction volume (p = .006). This Python + SQL analysis uses a different disaster definition, so the results are not a like-for-like replication. It describes recorded order activity, not unmet need or completed deliveries.
+![Weekly qualifying food-bank orders](reports/figures/weekly_orders.png)
 
-## See the finished work
+## Original study
 
-- [Findings and decision](reports/FINDINGS.md): concise, readable directly on GitHub.
-- [Standalone interactive report](reports/report.html): download and open in a browser; all charts and dependencies are embedded. GitHub's file view displays HTML source rather than running it.
-- [Weekly activity figure](reports/figures/weekly_orders.png).
-- [Methods and specification](docs/ANALYSIS_PLAN.md), [data dictionary](data/README.md), and [audit evidence](data/public/audit.json).
-- [Interview walkthrough and recruiting materials](docs/RECRUITING.md).
-- [Verification record](docs/VERIFICATION.md) and [completed release checklist](RELEASE_CHECKLIST.md).
+This extends a collaborative Emory AI.Data Lab / TechBridge project. The [original R analyses](https://github.com/YushuFan/YushuFan/tree/main/projects/ai-data-lab) examined disaster severity and reported an association with transaction volume (p = .006). This Python/SQL analysis uses disaster-event overlap instead. The two estimates answer different comparisons.
 
-## Why this question matters
+## Data checks
 
-An operations analyst needs to distinguish changing order activity from increased need or completed delivery. A regional disaster calendar is tempting as a surge-planning input, but the measurement and comparison must be credible before setting an operational rule.
-
-This project revisits an earlier R analysis using a reproducible Python workflow and explicit SQL metrics. The most important work happens before regression:
+Before fitting the models, I checked which records could support a meaningful order count:
 
 | Audit finding | Change to the analysis |
 |---|---|
@@ -84,6 +77,10 @@ The historical project describes this as a Georgia study extract; retained struc
 
 ## Contribution and sources
 
-Original R analysis: **Yushu Fan**, within a collaborative AI.Data Lab / TechBridge project. The Python + SQL rebuild, tests, statistical review, and presentation were developed with **OpenAI Codex assistance**. Other original team deliverables are not claimed as solely authored. The owner confirmed permission to publish the food-bank materials; no partner endorsement is implied.
+Original R analysis: **Yushu Fan**, within a collaborative AI.Data Lab / TechBridge project. The Python + SQL rebuild, tests, statistical review, and presentation were developed with **OpenAI Codex assistance**. Other original team deliverables are not claimed as solely authored.
 
 See [sources and reuse notes](docs/SOURCES.md). Actual deployment, user adoption, or an improvement in food distribution has not been measured or claimed.
+
+## Technical documentation
+
+[Data dictionary](data/README.md) · [Audit evidence](data/public/audit.json) · [Verification](docs/VERIFICATION.md)
