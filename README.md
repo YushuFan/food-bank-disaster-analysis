@@ -4,9 +4,7 @@
 
 Disaster planning often assumes orders will rise during an emergency. I rebuilt a collaborative Emory/TechBridge study to test that assumption using more than 600,000 food-order lines.
 
-**Updated analysis:** The estimated difference was **−2.9%** (95% CI: **−13.0% to +8.4%**). The range includes no change, so this dataset does not support a blanket disaster-week surge multiplier.
-
-![Association estimates and uncertainty across six specifications](reports/figures/sensitivity.png)
+**Updated analysis:** In a calendar-adjusted comparison, the estimated difference was **−2.9%** (95% CI: **−13.0% to +8.4%**). The interval includes no change. This is one reanalysis using a different exposure definition, not a direct replication of the original team result.
 
 **55,201 qualifying orders · 520 observed weeks · 6 model specifications**
 
